@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binary VAI</title>
+  <style>
+    body {
+      background-color: black;
+      color: green;
+      font-family: "Courier New", Courier, monospace;
+    }
+    #terminal {
+      border: 2px solid green;
+      width: 80%;
+      height: 80%;
+      margin: 50px auto;
+      padding: 10px;
+    }
+    #terminal p {
+      margin: 5px;
+    }
+    input[type="text"] {
+      width: 70%;
+      background-color: black;
+      color: green;
+      border: 1px solid green;
+      padding: 5px;
+      margin-top: 10px;
+    }
+    button {
+      background-color: black;
+      color: green;
+      border: 1px solid green;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: green;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal">
+    <p>Welcome to VinceAI.</p>
+    <p>Type a question to begin.</p>
+    <div>
+      <input id="question" type="text" placeholder="Type your question here...">
+      <button onclick="askVinceAI()">Submit</button>
+    </div>
+    <div id="response">
+      <!-- AI responses will show here -->
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
