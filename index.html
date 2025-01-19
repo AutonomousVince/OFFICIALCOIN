@@ -12,58 +12,31 @@
             margin: 0;
             padding: 0;
             background-color: black;
-            color: #00FF00;
+            color: #FFFF00; /* Changed to Neon Yellow */
             font-family: "Courier New", Courier, monospace;
             font-size: 16px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
             height: 100vh;
-            border: 3px solid #00FF00;
+            border: 3px solid #FFFF00; /* Changed to Neon Yellow */
             box-sizing: border-box;
-        }
-
-        .header {
-            text-align: left;
-            margin: 10px;
-            font-size: 14px;
+            text-align: center;
         }
 
         .header h1 {
-            font-size: 20px;
+            font-size: 24px;
             margin: 0;
         }
 
         .header p {
-            margin: 5px 0 0 0;
-            font-size: 14px;
+            margin: 10px 0;
+            font-size: 16px;
         }
 
         .content {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-        }
-
-        .footer {
-            display: flex;
-            padding: 10px;
-            border-top: 2px solid #00FF00;
-        }
-
-        .footer input {
-            flex: 1;
-            background-color: transparent;
-            border: none;
-            color: #00FF00;
-            font-family: "Courier New", Courier, monospace;
-            font-size: 16px;
-            padding: 5px;
-            outline: none;
-        }
-
-        .footer input::placeholder {
-            color: #00FF00;
+            margin: 20px;
         }
     </style>
 </head>
@@ -72,30 +45,10 @@
         <h1>Welcome to Official OFFICIAL Coin</h1>
         <p>The most Official coin in Official Coin business.</p>
     </div>
-    <div class="content" id="output">
+    <div class="content">
         <p>We take "official" to the next level. Join us as we redefine what it means to be truly official in the world of cryptocurrencies.</p>
         <p><strong>Mission:</strong> To create the most Official OFFICIAL Coin, delivering serious gains with unmatched irony and authenticity.</p>
         <p><strong>Vision:</strong> To be the gold standard for Official Coins that are, ironically, not official at all.</p>
     </div>
-    <div class="footer">
-        <input type="text" id="command" placeholder="Type a command...">
-    </div>
-
-    <script>
-        const outputDiv = document.getElementById('output');
-        const commandInput = document.getElementById('command');
-
-        commandInput.addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
-                const userInput = commandInput.value;
-                if (userInput.trim() !== '') {
-                    outputDiv.innerHTML += `<p>> ${userInput}</p>`;
-                    outputDiv.innerHTML += `<p>Official Response: We are reviewing your official input.</p>`;
-                    commandInput.value = '';
-                    outputDiv.scrollTop = outputDiv.scrollHeight;
-                }
-            }
-        });
-    </script>
 </body>
 </html>
