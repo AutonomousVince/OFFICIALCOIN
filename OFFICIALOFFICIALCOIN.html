@@ -1,59 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Binary VAI</title>
-  <style>
-    body {
-      background-color: black;
-      color: green;
-      font-family: "Courier New", Courier, monospace;
-    }
-    #terminal {
-      border: 2px solid green;
-      width: 80%;
-      height: 80%;
-      margin: 50px auto;
-      padding: 10px;
-    }
-    #terminal p {
-      margin: 5px;
-    }
-    input[type="text"] {
-      width: 70%;
-      background-color: black;
-      color: green;
-      border: 1px solid green;
-      padding: 5px;
-      margin-top: 10px;
-    }
-    button {
-      background-color: black;
-      color: green;
-      border: 1px solid green;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: green;
-      color: black;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official OFFICIAL Coin</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: #00FF00;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+            border: 3px solid #00FF00;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: left;
+            margin: 10px;
+            font-size: 14px;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .header p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .footer {
+            display: flex;
+            padding: 10px;
+            border-top: 2px solid #00FF00;
+        }
+
+        .footer input {
+            flex: 1;
+            background-color: transparent;
+            border: none;
+            color: #00FF00;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 16px;
+            padding: 5px;
+            outline: none;
+        }
+
+        .footer input::placeholder {
+            color: #00FF00;
+        }
+    </style>
 </head>
 <body>
-  <div id="terminal">
-    <p>Welcome to VinceAI.</p>
-    <p>Type a question to begin.</p>
-    <div>
-      <input id="question" type="text" placeholder="Type your question here...">
-      <button onclick="askVinceAI()">Submit</button>
+    <div class="header">
+        <h1>Welcome to Official OFFICIAL Coin</h1>
+        <p>The most Official coin in Official Coin business.</p>
     </div>
-    <div id="response">
-      <!-- AI responses will show here -->
+    <div class="content" id="output">
+        <p>We take "official" to the next level. Join us as we redefine what it means to be truly official in the world of cryptocurrencies.</p>
+        <p><strong>Mission:</strong> To create the most Official OFFICIAL Coin, delivering serious gains with unmatched irony and authenticity.</p>
+        <p><strong>Vision:</strong> To be the gold standard for Official Coins that are, ironically, not official at all.</p>
     </div>
-  </div>
-  <script src="script.js"></script>
+    <div class="footer">
+        <input type="text" id="command" placeholder="Type a command...">
+    </div>
+
+    <script>
+        const outputDiv = document.getElementById('output');
+        const commandInput = document.getElementById('command');
+
+        commandInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                const userInput = commandInput.value;
+                if (userInput.trim() !== '') {
+                    outputDiv.innerHTML += `<p>> ${userInput}</p>`;
+                    outputDiv.innerHTML += `<p>Official Response: We are reviewing your official input.</p>`;
+                    commandInput.value = '';
+                    outputDiv.scrollTop = outputDiv.scrollHeight;
+                }
+            }
+        });
+    </script>
 </body>
 </html>
-
