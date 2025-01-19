@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             background-color: black;
-            color: #FFFF00; /* Changed to Neon Yellow */
+            color: #FFFF00; /* Neon Yellow */
             font-family: "Courier New", Courier, monospace;
             font-size: 16px;
             display: flex;
@@ -20,7 +20,7 @@
             justify-content: center; /* Center content vertically */
             align-items: center; /* Center content horizontally */
             height: 100vh;
-            border: 3px solid #FFFF00; /* Changed to Neon Yellow */
+            border: 3px solid #FFFF00; /* Neon Yellow */
             box-sizing: border-box;
             text-align: center;
         }
@@ -38,6 +38,27 @@
         .content {
             margin: 20px;
         }
+
+        .ascii-footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: #FFFF00; /* Neon Yellow */
+            overflow: hidden;
+            white-space: nowrap;
+            animation: scroll 10s linear infinite;
+            font-size: 12px;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
 <body>
@@ -49,6 +70,9 @@
         <p>We take "official" to the next level. Join us as we redefine what it means to be truly official in the world of cryptocurrencies.</p>
         <p><strong>Mission:</strong> To create the most Official OFFICIAL Coin, delivering serious gains with unmatched irony and authenticity.</p>
         <p><strong>Vision:</strong> To be the gold standard for Official Coins that are, ironically, not official at all.</p>
+    </div>
+    <div class="ascii-footer">
+        OOC OOC OOC OOC OOC OOC OOC OOC OOC OOC OOC OOC OOC OOC OOC OOC OOC OOC OOC OOC
     </div>
 </body>
 </html>
